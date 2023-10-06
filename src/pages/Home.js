@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useState, useEffect, useCallback } from 'react';
 import room1 from '../assets/images/room1.jpg';
 import room2 from '../assets/images/room2.jpg';
 import room3 from '../assets/images/room3.jpg';
@@ -8,6 +9,14 @@ function Home() {
   const roomImages = [room1, room2, room3];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  const nextSlide = useCallback(() => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % roomImages.length);
+  }, [roomImages.length]);
+
+  const prevSlide = useCallback(() => {
+    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + roomImages.length) % roomImages.length);
+  }, [roomImages.length]);
+
   useEffect(() => {
     const timer = setInterval(() => {
       nextSlide();
@@ -16,15 +25,7 @@ function Home() {
     return () => {
       clearInterval(timer);
     };
-  }, []);
-
-  const nextSlide = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % roomImages.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + roomImages.length) % roomImages.length);
-  };
+  }, [nextSlide]);
 
   return (
     <div className="slideshow-container">

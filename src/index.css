@@ -58,19 +58,21 @@ body {
 }
 
 .navbar {
-  display: flex;
+  /* display: flex; */
   gap: 20px;
+  margin-right: 20px;
 }
 
 .nav-link {
   text-decoration: none;
   color: #333;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
+  font-size: 1.1rem;
+  /* transition: color 0.3s ease; */
+  transition: color 0.3s ease-in-out;
 }
 
 .nav-link:hover {
-  color: #ff9900;
+  color: #87cefa;
 }
 
 .nav-toggle {
@@ -133,7 +135,7 @@ body {
 
 .footer{
   background-color: salmon;
-  height: 25px;
+  height: 45px;
   padding: 10px 20px;
   border-radius: 8px;
   align-items: center;
@@ -416,6 +418,7 @@ button[type="submit"]:hover {
   border-radius: 5px;
   cursor: pointer;
   animation: scrollLoop 5s linear infinite;
+  margin-top: 30px;
 }
 
 /* Media Query for Tablets and Smaller Screens */
@@ -477,37 +480,40 @@ button[type="submit"]:hover {
 }
 
 /* Button styling */
-.btn {
-  display: inline-block;
-  padding: 10px 20px; /* Adjust padding to your preference */
-  font-size: 16px; /* Increase font size for better visibility */
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.button {
+  margin-left: 50px;
 }
 
-.view-button {
+ .view-button {
+  width: 160px;
   cursor: pointer;
   border-radius: 4px;
   background-color: #3498db;
   text-decoration: none !important;
   color: #fff;
   margin-right: 10px;
-  padding: 8px 16px; /* Adjust padding to match .btn padding */
+  padding: 8px 16px; 
 }
 
 .book-button {
+  width: 160px !important;
   cursor: pointer;
   border-radius: 4px;
   text-decoration: none;
   background-color: #0bda51;
   color: #fff;
-  padding: 8px 16px; /* Adjust padding to match .btn padding */
+  padding: 8px 16px;
+  margin-top: 10px;
 }
 
 .view-button:hover,
 .book-button:hover {
+  background-color: #2c3e50;
+} 
+
+
+.view-but:hover,
+.book-but:hover {
   background-color: #2c3e50;
 }
 
@@ -688,145 +694,48 @@ img {
 }
 
 
-
-
-
-
-
-
-
 /* search-icon*/
- .search-container {
-   max-width: 300px;
-   margin: 0 auto;
-   display: flex;
-   align-items: center;
- } 
-
- /*.search {
-   flex: 1;
-   padding: 10px;
-   font-size: 14px;
-   border: 2px solid #ccc;
-   border-radius: 5px;
-   outline: none;
-   transition: border-color 0.3s ease, box-shadow 0.3s ease;
- }
-
- .search:focus {
-   border-color: #3498db;
-   box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
- }
-
- .search-icon {
-   font-size: 12px;
-   background-color: #3498db;
-   color: #fff;
-   border-radius: 20%;
-   padding: 10px;
-   margin-left: -35px;
-   cursor: pointer;
-   transition: background-color 0.3s ease, transform 0.3s ease;
- }
-
- .search-icon:hover {
-   background-color: #2980b9;
-   transform: scale(1.1);
- }
-
- @keyframes pulse {
-
-   0%,
-   100% {
-     transform: scale(1);
-   }
-
-   50% {
-     transform: scale(1.1);
-   }
- }
-
- .search-icon:focus {
-   animation: pulse 1s infinite;
- }
-
-
- .search-container:hover {
-   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-   transform: translateY(-2px);
- }
-
-
- .search-container:focus-within {
-   animation: glow 1s alternate infinite;
- }
-
- @keyframes glow {
-
-   0%,
-   100% {
-     box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
-   }
-
-   50% {
-     box-shadow: 0 0 10px rgba(52, 152, 219, 0.9);
-   }
- }  */
-
-
-
-/* Container for search input */
-/* .search-container {
+.search-container {
   display: flex;
   align-items: center;
-  background-color: #ffffff;
-  border-radius: 5px;
-  padding: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s, box-shadow 0.3s;
-} */
-
-/* Search icon */
-.search-container svg {
-  font-size: 24px;
-  color: #555;
-  margin-right: 12px;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 300px; 
+  margin: 0 auto; 
+  transition: all 0.3s ease; 
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
-/* Search input */
-.search-container input[type="text"] {
-  flex: 1;
-  border: 1px solid black;
-  outline: none;
-  font-size: 18px;
-  color: #333;
-  background-color: transparent;
-}
-
-/* Hover effect for the container */
 .search-container:hover {
-  background-color: #f7f7f7;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
-  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  background-color: #fff; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
-/* Focus effect for the input */
-.search-container input[type="text"]:focus {
-  border: 1px solid #007BFF;
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
+.search-container input {
+  flex: 1;
+  border: none;
+  padding: 8px;
+  margin-left: 10px;
+  outline: none;
+  font-size: 14px;
 }
 
-/* Placeholder text styling */
-.search-container input[type="text"]::placeholder {
-  color: #999;
+.search-container svg {
+  margin-right: 10px;
+  color: #555;
+  transition: color 0.3s ease; /* Add color transition effect */
 }
 
-/* Icon hover effect */
-.search-container svg:hover {
-  color: #007BFF;
-  transition: color 0.3s;
+.search-container:hover svg {
+  color: #333; /* Change icon color on hover */
 }
+
+
+
+
 
  /* Hotel details  */
 
@@ -1131,8 +1040,9 @@ img {
 
 .original-price {
   font-size: 18px;
-  color: #888;
+  color: white !important;
   text-decoration: line-through;
+  background: linear-gradient(45deg, #e74c3c, #ff6b6b);
 }
 
 .offer-percentage {
@@ -1309,6 +1219,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* width: 60px; */
 }
 
 .decrement-button,
@@ -1943,12 +1854,12 @@ img {
   background-color: #218838;
 }
 
-/* Styles for the explore-more */
-.explore-more {
+
+/* .explore-more {
   font-size: 1.2em;
   color: #555;
-  margin-top: 30px;
-}
+  margin-top: 50px;
+} */
 
 /* Media query for responsiveness */
 @media (max-width: 768px) {

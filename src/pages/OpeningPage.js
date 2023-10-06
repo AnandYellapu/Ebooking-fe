@@ -20,7 +20,7 @@ const OpeningPage = () => {
       <p className="get-started-text">
         Ready to embark on your journey? Sign in or register to start booking!
       </p>
-      <Link to="/login">
+      <Link to="/home">
         <button className="get-started-button">Get Started</button>
       </Link>
       <p className="explore-more">

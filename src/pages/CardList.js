@@ -104,12 +104,12 @@ function App() {
             <p className="card-location">
               <FaMapMarkerAlt /> {hotel.location}
             </p>
-            <Link to={`/hotel/${hotel._id}`} className="btn view-button">
-              View Details
-            </Link>
-            <Link to={`/booking/${hotel._id}`} className="btn book-button">
-              Book Now
-            </Link>
+            <Link to={`/hotel/${hotel._id}`} className="button view-button">
+            <span>View Details</span>
+          </Link>
+          <Link to={`/booking/${hotel._id}`} className="button book-button">
+            <span>Book Now</span>
+          </Link>          
           </div>
         ))}
       </div>

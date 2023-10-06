@@ -65,6 +65,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import OpeningPage from './pages/OpeningPage';
+import Logout from './components/auth/Logout';
 
 function App() {
   return (
@@ -113,6 +114,11 @@ function App() {
         <Route path="/booking-confirmation" element={<>
           <Header />
           <BookingConfirmationPage />
+          <Footer />
+        </>} />
+        <Route path="/logout" element={<>
+          <Header />
+          <Logout />
           <Footer />
         </>} />
         <Route path="*" element={<NotFound />} />
