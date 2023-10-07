@@ -1809,6 +1809,7 @@ img {
 .opening-page-container {
   text-align: center;
   padding: 50px;
+  margin-top: 60px;
 }
 
 /* Styles for the app-logo */
@@ -1834,41 +1835,54 @@ img {
   line-height: 1.5;
 }
 
-/* Styles for the get-started-text */
-.get-started-text {
-  font-size: 1.2em;
-  color: #333;
-  margin-top: 30px;
-}
+
 
 
 .get-started-button {
-  background-color: #28a745;
-  color: #fff;
+  position: relative;
+  display: inline-block;
   padding: 15px 30px;
-  font-size: 0.9em;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 20px;
+  font-size: 1em;
+  color: #fff;
+  background: linear-gradient(45deg, #FF8C00, #FF6347); /* Gradient Orange to Tomato Red */
+  border: 2px solid #FF6347; /* Tomato Red */
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s ease, transform 0.3s ease;
   margin-bottom: 20px;
-  transition: background-color 0.3s ease;
+}
+
+.get-started-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #FF6347, #FF8C00); /* Gradient Tomato Red to Orange */
+  border-radius: 10px;
+  z-index: -1;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+  
 }
 
 .get-started-button:hover {
-  background-color: #218838;
+  color: #FF6347; /* Tomato Red */
+  transform: translateY(-3px);
+}
+
+.get-started-button:hover::before {
+  transform-origin: top left;
+  transform: scaleX(1);
 }
 
 
-/* .explore-more {
-  font-size: 1.2em;
-  color: #555;
-  margin-top: 50px;
-} */
 
 /* Media query for responsiveness */
 @media (max-width: 768px) {
-  /* Adjustments for smaller screens */
   .opening-page-container {
     padding: 30px;
   }

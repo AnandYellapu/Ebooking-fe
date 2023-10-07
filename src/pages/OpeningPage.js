@@ -10,13 +10,6 @@ const OpeningPage = () => {
       <p className="app-description1">
         Discover a world of exceptional hotels for your next adventure.
       </p>
-      <p className="app-description2">
-        Our app makes it easy to find, book, and experience the perfect stay.
-      </p>
-      <p className="app-description3">
-        Whether it's a luxurious resort, a cozy bed and breakfast, or a
-        budget-friendly option, we have something for every traveler.
-      </p>
       <p className="get-started-text">
         Ready to embark on your journey? Sign in or register to start booking!
       </p>
