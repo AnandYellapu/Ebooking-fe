@@ -38,7 +38,7 @@ function App() {
     { label: '₹500 - ₹1000', min: 500, max: 1000 },
     { label: '₹1000 - ₹1500', min: 1000, max: 1500 },
     { label: '₹1500 - ₹2000', min: 1500, max: 2000 },
-    { label: 'Above ₹2000', min: 2000, max: Infinity },
+    { label: 'Above ₹2000', min: 2000, max: Infinity }
   ];
 
   const handleSearchTermChange = (newSearchTerm) => {
