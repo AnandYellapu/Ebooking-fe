@@ -17,7 +17,7 @@ const UpdateHotelForm = ({ id }) => {
     // Fetch the hotel data based on the hotelId and populate the form
     const fetchHotelData = async (id) => {
       try {
-        const response = await axios.get(`http://localhost:2345/api/hotels/${id}`);
+        const response = await axios.get(`https://ebooking-7qqn.onrender.com/api/hotels/${id}`);
         const hotelData = response.data.data;
 
         setName(hotelData.name);
@@ -52,7 +52,7 @@ const UpdateHotelForm = ({ id }) => {
     };
 
     try {
-      await axios.put(`http://localhost:2345/api/hotels/update-hotel/${params.id}`, updatedHotel);
+      await axios.put(`https://ebooking-7qqn.onrender.com/api/hotels/update-hotel/${params.id}`, updatedHotel);
         console.log('Hotel updated successfully');
          navigate(`/hotel/${params.id}`);
       // You can add a callback or redirection logic here after successful update

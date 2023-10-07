@@ -14,7 +14,7 @@ const Login = () => {
 
     try {
       // Make a POST request to log in the user
-      const response = await axios.post('http://localhost:2345/api/users/login', { email, password });
+      const response = await axios.post('https://ebooking-7qqn.onrender.com/api/users/login', { email, password });
 
       // Store the token in local storage or a state management solution
       sessionStorage.setItem('token', response.data.token);

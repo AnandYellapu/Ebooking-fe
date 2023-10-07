@@ -27,7 +27,7 @@ const AddHotelForm = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:2345/api/hotels/add-hotel', newHotel);
+      const response = await axios.post('https://ebooking-7qqn.onrender.com/api/hotels/add-hotel', newHotel);
       console.log('Hotel added:', response.data);
 
       // Provide user feedback (e.g., show a success message)

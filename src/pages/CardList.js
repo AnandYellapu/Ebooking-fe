@@ -23,7 +23,7 @@ function App() {
     };
 
     axios
-      .get('http://localhost:2345/api/hotels/home', { headers })
+      .get('https://ebooking-7qqn.onrender.com/api/hotels/home', { headers })
       .then((response) => {
         setHotels(response.data);
       })

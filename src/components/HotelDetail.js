@@ -27,7 +27,7 @@ const HotelDetails = () => {
   useEffect(() => {
     const fetchHotelDetails = async (id) => {
       try {
-        const response = await axios.get(`http://localhost:2345/api/hotels/${id}`);
+        const response = await axios.get(`https://ebooking-7qqn.onrender.com/api/hotels/${id}`);
         setHotel(response.data.data);
         setLoading(false);
       } catch (err) {
@@ -48,7 +48,7 @@ const HotelDetails = () => {
           label: 'Yes',
           onClick: async () => {
             try {
-              await axios.delete(`http://localhost:2345/api/hotels/${params.id}`);
+              await axios.delete(`https://ebooking-7qqn.onrender.com/api/hotels/${params.id}`);
               // Redirect to the home page after successful deletion
               navigate('/');
             } catch (error) {

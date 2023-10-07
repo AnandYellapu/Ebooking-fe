@@ -21,7 +21,7 @@ const BookingPage = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:2345/api/hotels/${id}`)
+      .get(`https://ebooking-7qqn.onrender.com/api/hotels/${id}`)
       .then((response) => {
         setHotel(response.data.data);
       })
@@ -69,7 +69,7 @@ const BookingPage = () => {
     };
 
     axios
-      .post(`http://localhost:2345/api/bookings/booking/${id}`, {
+      .post(`https://ebooking-7qqn.onrender.com/api/bookings/booking/${id}`, {
         hotelId: id,
         ...bookingData,
         discountedPrice: `₹${discountedPrice}`,
@@ -231,7 +231,7 @@ export default BookingPage;
 
 //   useEffect(() => {
 //     axios
-//       .get(`http://localhost:2345/api/hotels/${id}`)
+//       .get(`https://ebooking-7qqn.onrender.com/api/hotels/${id}`)
 //       .then((response) => {
 //         setHotel(response.data.data);
 //       })
@@ -285,7 +285,7 @@ export default BookingPage;
 //       };
 
 //       axios
-//         .post(`http://localhost:2345/api/bookings/booking/${id}`, {
+//         .post(`https://ebooking-7qqn.onrender.com/api/bookings/booking/${id}`, {
 //           hotelId: id,
 //           ...bookingData,
 //           discountedPrice: `₹${discountedPrice}`,
