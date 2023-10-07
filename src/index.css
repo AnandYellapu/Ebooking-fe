@@ -1837,16 +1837,17 @@ img {
   margin-top: 30px;
 }
 
-/* Styles for the get-started-button */
+
 .get-started-button {
   background-color: #28a745;
   color: #fff;
   padding: 15px 30px;
-  font-size: 1.2em;
+  font-size: 0.9em;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 20px;
+  margin-bottom: 20px;
   transition: background-color 0.3s ease;
 }
 
@@ -1885,7 +1886,7 @@ img {
   margin: 0 auto;
   margin-top: 60px;
   padding: 40px;
-  background-color: #ffffff;
+  background-color: white !important;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -1972,7 +1973,7 @@ img {
   margin: 0 auto;
   margin-top: 90px;
   padding: 40px;
-  background-color: #ffffff;
+  background-color:  white !important;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
