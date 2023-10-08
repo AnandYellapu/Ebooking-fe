@@ -15,7 +15,8 @@ const Register = () => {
 
     try {
       // Make a POST request to register a new user
-      await axios.post('https://ebooking-7qqn.onrender.com/api/users/register', { username, email, password });
+      await axios.post('https://ebooking-7qqn.onrender.com/api/users/register', { username, email, password, isAdmin: true });
+      // console.log('Data received:', { username, email, password, isAdmin: true });
 
       toast.success('Successfully registered!');
       navigate('/');
