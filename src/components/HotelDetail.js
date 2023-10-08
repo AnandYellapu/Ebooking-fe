@@ -249,15 +249,15 @@ const HotelDetails = () => {
           return;
         }
 
-        console.log('Decoding token...');
+        
         const decodedToken = parseJwt(token);
-        console.log('Decoded token:', decodedToken);
+        
 
         if (decodedToken && decodedToken.user && decodedToken.user.role === 'admin') {
           setIsAdmin(true);
-          console.log('User is an admin.');
+        
         } else {
-          console.log('User is not an admin.');
+          
         }
 
         const response = await axios.get(`https://ebooking-7qqn.onrender.com/api/hotels/${id}`);

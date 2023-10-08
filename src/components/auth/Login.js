@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';  // Import the toast module
+import { toast } from 'react-toastify'; 
+import { FaUserCircle } from 'react-icons/fa';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -33,17 +34,24 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container5">
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit} className="login-form5">
-        <label className="login-label5">Email:</label>
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required className="login-input5" />
+    <div className="register-container5">
+  <h2>
+    Login
+ </h2>
+ <FaUserCircle className='user-icon'/>
+      <form onSubmit={handleSubmit} className="register-form5">
+        <label className="register-label5">Email:</label>
+        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required className="register-input5" />
 
-        <label className="login-label5">Password:</label>
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required className="login-input5" />
+        <label className="register-label5">Password:</label>
+        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required className="register-input5" />
 
-        <button type="submit" className="login-button5">Login</button>
+        <button type="submit" className="register-button5">Login</button>
       </form>
+
+      <p className="forgot-password-link">
+        <Link to="/forgot-password" className="forgot-password-link">Forgot Password?</Link>
+      </p>
 
       <p className="register-link5">
         Not Yet Registered? <Link to="/register" className="register-link5">Register</Link>
